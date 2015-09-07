@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+     text-align:center;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+
+</head>
+<body>
+
+<div id="header">
+<h1>Empolyee LogIn</h1>
+</div>
+
+<div id="nav">
+LogIn<br>
+<a href="file:///home/tudip/Desktop/CSS/new.html">New User</a><br>
+</div>
+
+<div id="section">
+<h2>LogIn</h2>
+Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="login" ><br>
+Password:<input type="password" id="pwd"><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="RESET" onclick="window.location='file:///home/tudip/Desktop/CSS/index.html';" ><button type="button" onclick="validate()">Login</button><br>
+<i id="a" style="color:red"></i>
+
+</div>
+
+<div id="footer">
+@Tudip Technology
+</div>
+<script>
+
+function validate()
+{
+ var text;
+var email=document.getElementById('login').value;
+var pass=document.getElementById('pwd').value;
+if (email=='sagar' && pass=='12345')  
+  {  
+    window.location="file:///home/tudip/Desktop/CSS/home.html"
+   text="";
+  } 
+else
+{ 
+ text="You have entered an invalid email & password"
+ 
+   // alert("You have entered an invalid email & password")  
+  //  return (false) 
+} 
+document.getElementById('a').innerHTML=text;
+}
+
+</script>
+</body>
+</html>
+
